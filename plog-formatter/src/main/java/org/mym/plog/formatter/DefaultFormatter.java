@@ -119,7 +119,7 @@ public class DefaultFormatter implements Formatter {
             boolean formatted = false;
             for (FormatterImpl impl : mFormatterImpls) {
                 if (isFormatterAvailable(impl.typeFlag, param, impl.supportedClass)){
-                    formattedParam[i] = impl.formatter.format(msg, param);
+                    formattedParam[i] = impl.formatter.format("", param);
                     formatted = true;
                     break;
                 }
